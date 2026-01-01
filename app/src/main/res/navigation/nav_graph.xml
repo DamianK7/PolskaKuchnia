@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
 
+    <fragment android:id="@+id/startFragment"
+        android:name="com.example.polskakuchnia.ui.StartFragment"
+        android:label="Start" tools:layout="@layout/fragment_start" />
+
+    <fragment android:id="@+id/menuChoiceFragment"
+        android:name="com.example.polskakuchnia.ui.MenuChoiceFragment"
+        android:label="Zamówienie" tools:layout="@layout/fragment_menu_choice" />
+
+    <fragment android:id="@+id/summaryFragment"
+        android:name="com.example.polskakuchnia.ui.SummaryFragment"
+        android:label="Podsumowanie" tools:layout="@layout/fragment_summary" />
+
+    <fragment android:id="@+id/readyMealFragment"
+        android:name="com.example.polskakuchnia.ui.ReadyMealFragment"
+        android:label="Gotowe Dania" tools:layout="@layout/fragment_ready_meal" />
+
+    <fragment android:id="@+id/customMealFragment"
+        android:name="com.example.polskakuchnia.ui.CustomMealFragment"
+        android:label="Własne Danie" tools:layout="@layout/fragment_custom_meal" />
 </navigation>
