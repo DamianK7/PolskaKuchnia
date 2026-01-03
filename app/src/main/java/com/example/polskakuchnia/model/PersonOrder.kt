@@ -1,12 +1,14 @@
 package com.example.polskakuchnia.model
 
+data class OrderItem(
+    val name: String,
+    val price: Double
+)
+
 data class PersonOrder(
-    var soupName: String = "",
-    var soupPrice: Double = 0.0,
-    var mainDishName: String = "",
-    var mainDishPrice: Double = 0.0,
-    var drinkName: String = "",
-    var drinkPrice: Double = 0.0
+    val items: MutableList<OrderItem> = mutableListOf()
 ) {
-    fun totalCost() = soupPrice + mainDishPrice + drinkPrice
+    fun total(): Double {
+        return items.sumOf { it.price }
+    }
 }

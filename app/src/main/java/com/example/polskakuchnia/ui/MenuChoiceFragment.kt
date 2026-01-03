@@ -16,5 +16,9 @@ class MenuChoiceFragment : Fragment(R.layout.fragment_menu_choice) {
         binding.btnGoToReadyMeals.setOnClickListener {
             findNavController().navigate(R.id.readyMealFragment)
         }
+
+        binding.btnGoToCustomMeals.setOnClickListener {
+            findNavController().navigate(R.id.customMealFragment)
+        }
     }
 }
